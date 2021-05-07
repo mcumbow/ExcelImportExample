@@ -1,0 +1,22 @@
+﻿using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ExcelExample.Models
+{
+    public class FileUploadViewModel
+    {
+        public IFormFile XlsFile { get; set; }
+        /*creates StaffInfoViewModel object because we need to add read excel data and mapping in StaffInfoViewModel*/
+
+        public StaffInfoViewModel StaffInfoViewModel { get; set; }
+
+        public FileUploadViewModel() //Create contractor
+        {
+            //call StaffInfoViewModel this object in contractor
+            StaffInfoViewModel = new StaffInfoViewModel();
+        }
+    }
+}
